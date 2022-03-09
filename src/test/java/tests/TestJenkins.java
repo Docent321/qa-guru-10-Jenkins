@@ -70,9 +70,6 @@ public class TestJenkins {
             $("[for='hobbies-checkbox-1']").click();
         });
 
-        step("Load picture", () -> {
-            $("#uploadPicture").uploadFile(new File("src/test/java/resources/ava.jpg"));
-        });
 
         step("Enter address", () -> {
             $("#currentAddress").setValue("Moskov");
@@ -84,6 +81,10 @@ public class TestJenkins {
 
         step("Select city", () -> {
             $("#react-select-4-input").setValue("Delhi").pressEnter();
+        });
+
+        step("Load picture", () -> {
+            $("#uploadPicture").uploadFile(new File("src/test/resources/ava.jpg"));
         });
 
         step("submit click", () -> {
