@@ -69,7 +69,7 @@ public class TestJenkins {
         });
 
         step("Load picture", () -> {
-            $("#uploadPicture").uploadFromClasspath("ava.jpg");
+            $("#uploadPicture").uploadFromClasspath("src/test/java/resources/ava.jpg");
         });
 
         step("Enter address", () -> {
