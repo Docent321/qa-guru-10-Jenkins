@@ -7,6 +7,8 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
+import java.io.File;
+
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
@@ -69,7 +71,7 @@ public class TestJenkins {
         });
 
         step("Load picture", () -> {
-            $("#uploadPicture").uploadFromClasspath("src/test/java/resources/ava.jpg");
+            $("#uploadPicture").uploadFile(new File("src/test/java/resources/ava.jpg"));
         });
 
         step("Enter address", () -> {
