@@ -15,9 +15,9 @@ public class TestJenkins {
 
     @BeforeAll
     static void beforeAll() {
-        //Configuration.baseUrl = "https://demoqa.com";
+        Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1920x1080";
-        Configuration.remote = "https://AlexDonskov:1234AD!@selenoid.autotests.cloud/wd/hub";
+        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
@@ -29,7 +29,7 @@ public class TestJenkins {
     @Test
     void successFillTest() {
         step("Open home page", () -> {
-            open("https://demoqa.com/automation-practice-form");
+            open("/automation-practice-form");
             $(".practice-form-wrapper").shouldHave(text("Student Registration Form"));
         });
 
