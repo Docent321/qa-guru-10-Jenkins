@@ -83,9 +83,9 @@ public class TestJenkins {
             $("#react-select-4-input").setValue("Delhi").pressEnter();
         });
 
-        step("Load picture", () -> {
-            $("#uploadPicture").uploadFile(new File("src/test/resources/ava.jpg"));
-        });
+//        step("Load picture", () -> {
+//            $("#uploadPicture").uploadFile(new File("src/test/resources/ava.jpg"));
+//        });
 
         step("submit click", () -> {
             $("#submit").click();
@@ -98,7 +98,7 @@ public class TestJenkins {
             $(".table-responsive").shouldHave(text("25 may,1980"));
             $(".table-responsive").shouldHave(text("Physics"));
             $(".table-responsive").shouldHave(text("Sports"));
-            $(".table-responsive").shouldHave(text("ava.jpg"));
+//            $(".table-responsive").shouldHave(text("ava.jpg"));
             $(".table-responsive").shouldHave(text("Moskov"));
             $(".table-responsive").shouldHave(text("NCR Delhi"));
         });
